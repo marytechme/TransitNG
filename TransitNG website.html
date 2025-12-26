@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TransitNG - Navigate Nigeria's Transit</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#12452b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "text-light": "#0d141b",
+                        "text-dark": "#ffffff",
+                        "text-secondary-light": "#4c739a",
+                        "text-secondary-dark": "#94a3b8",
+                        "border-light": "#e7edf3",
+                        "border-dark": "#2d3748",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-display antialiased">
+<div class="relative flex flex-col min-h-screen overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full border-b border-border-light dark:border-border-dark bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm">
+<div class="px-4 md:px-10 py-3 flex items-center justify-between max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-2 md:gap-4">
+<div class="size-8 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">directions_bus</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">TransitNG</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<div class="flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#features">Features</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#how-it-works">How it Works</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#testimonials">Testimonials</a>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center justify-center rounded-lg h-9 px-4 bg-primary/10 dark:bg-primary/20 text-primary hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors text-sm font-bold">
+<span class="truncate">Log In</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-9 px-4 bg-primary text-white hover:bg-primary/90 transition-colors text-sm font-bold shadow-lg shadow-primary/20">
+<span class="truncate">Get the App</span>
+</button>
+</div>
+</div>
+<button class="md:hidden text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<section class="relative w-full py-12 md:py-20 lg:py-24 px-4 md:px-10 flex justify-center bg-background-light dark:bg-background-dark overflow-hidden">
+<div class="absolute top-0 right-0 -mr-40 -mt-40 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px] pointer-events-none"></div>
+<div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+<div class="flex flex-col gap-6 text-center lg:text-left">
+<div class="inline-flex self-center lg:self-start items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                        Now live in Abuja
+                    </div>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-text-light dark:text-text-dark">
+                        Navigate Nigeria’s Transit with <span class="text-primary">Confidence</span>
+</h1>
+<p class="text-lg text-text-secondary-light dark:text-text-secondary-dark max-w-xl mx-auto lg:mx-0">
+                        The first turn-by-turn navigation app for Abuja's taxis, kekes, and green buses. Get real-time alerts so you never miss your stop amidst the bustle.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
+<button class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary text-white text-base font-bold shadow-lg shadow-primary/30 hover:bg-primary/90 hover:-translate-y-0.5 transition-all">
+<span>Get the App</span>
+<span class="material-symbols-outlined ml-2 text-xl">download</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-12 px-8 bg-white dark:bg-gray-800 border border-border-light dark:border-border-dark text-text-light dark:text-text-dark text-base font-bold hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+<span>View Live Map</span>
+</button>
+</div>
+<div class="flex items-center justify-center lg:justify-start gap-4 pt-4 opacity-70">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-white dark:border-background-dark bg-gray-300" data-alt="User avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5GfHoyZKltUE7c1Wp2tEwUYbrjiWhXDGrLJoNNTHmTKWFDx9FpQNiFJnSnhyNwmcWJH3j6-DzEmFDsI1d-_nKSh8owSwuBkJlQ_67I7toq026rKJyXKplUmWp6ckuAdCMie0LjIR0_SqSrQob6Y_AsZ10jCPx7b5NBFnvX9IZm-IN2EjBCxKw1eq3nd0Qm9gDw6jdYoj-71WH-ArFOXEF4O6VUeiNaS6WSPgdsonSPWPCF-diunirhaHAsr7y2rTMuAMxSTL_yQI'); background-size: cover;"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white dark:border-background-dark bg-gray-300" data-alt="User avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBtSURsSpyUZ1tD23eeLX8s99AHCiudICQSN_ioOgfuXyAG4y6pIJoYuEA31Q8kjuSGugobbbJowW0DyoEAzZ6jJSw_iIka0BWJLfcTTn35JpSJbVigCPHOEP4fvmRImmNHuM-XgUOcJVlP72JJKK1-PSJsfXvmxXKZhCDBt1PTKBT8dOQx18H1WnqzebBtAVdzYaLgo5lXGZYcPz6bQi_1wR_Vt189Y5WvTvlL0awDr1WPNdwqtwKotNknuSgVFDIzJ6sHVJYyKzk'); background-size: cover;"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white dark:border-background-dark bg-gray-300" data-alt="User avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEUV0YZduwOYKkW-RtYCYhpQ3uDYgWFYGj19mwgRIplxxJNOQPx2CJ0pa_8peNsOM2L3nGoy-71CdD7sp3hU2CLO08JOS8RxOTfOlsyBwU-DN2nfQBFJJHqoDueDQ_Rvu-BqDo5pC-blKGviFRLwR9FPpNtcssBk-NLOSV0XZdyB-DE8_IoNvU9HAiDf2UHeOavaVATVs0fO9hdDeuYg0daHHIUfvBMw47tawg_Q3Vb9g0aYy1A4K3mIxxCBtT_66tt5k7SNW5aZA'); background-size: cover;"></div>
+</div>
+<p class="text-sm font-medium">Trusted by 50,000+ commuters</p>
+</div>
+</div>
+<div class="relative w-full h-auto min-h-[400px] lg:min-h-[600px] flex items-center justify-center">
+<div class="relative z-20 w-[320px] h-[620px] bg-[#1a1a1a] rounded-[2.5rem] border-4 border-gray-800 shadow-2xl overflow-hidden flex flex-col">
+<div class="absolute top-0 w-full h-8 bg-[#1a1a1a] z-30 flex justify-center items-end pb-1">
+<div class="w-24 h-4 bg-black rounded-b-xl"></div>
+</div>
+<div class="w-full h-full bg-white relative flex flex-col pt-8">
+<div class="px-4 py-3 flex items-center justify-between bg-white border-b border-gray-100 z-20 shadow-sm">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-primary font-bold">A</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold text-gray-800">Current Location</span>
+<span class="text-[10px] text-gray-500 font-medium">Wuse Zone 4, Abuja</span>
+</div>
+</div>
+<button class="p-1.5 rounded-full hover:bg-gray-100">
+<span class="material-symbols-outlined text-gray-600 text-lg">menu</span>
+</button>
+</div>
+<div class="flex-1 bg-cover bg-center relative" data-alt="Map view of Abuja streets" data-location="Abuja" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBn_TinnQVhACrT3TIafCZxgzha2Uh22wW8dfsVjo7fbUr1sPvC-4ZiBS_EZx5tYa_Yr7JH8YDATQ6Ctw0Pmvm6orgOqneG0uFqpswXpGPvof7QS0KR0N0Hz43jkhEkRH-JOcO1e5x-oyKY_WBdfV8qIUcvUc6lmv5lil0xTTFajfkTicj1D677SElB0JKBMteCTobjgEAnKfXTEUUFS8Vha1P8UDnYHezqEqiiO0EWwDUwzx-ZBoAhJ_AT_4kSro2ES7ZCh_yO-Yg');">
+<div class="absolute inset-0 bg-yellow-50/10"></div>
+<svg class="absolute inset-0 w-full h-full pointer-events-none" style="filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.3));">
+<path d="M 160 520 L 160 400 L 220 340 L 220 180" fill="none" stroke="#12452b" stroke-dasharray="8 4" stroke-linecap="round" stroke-width="5"></path>
+<circle cx="160" cy="520" fill="#12452b" r="6" stroke="white" stroke-width="2"></circle>
+<circle cx="220" cy="180" fill="#dc2626" r="6" stroke="white" stroke-width="2"></circle>
+</svg>
+<div class="absolute right-4 bottom-36 z-10">
+<button class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-primary hover:bg-gray-50">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl p-5 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] transition-transform duration-300 ease-out">
+<div class="w-12 h-1.5 bg-gray-200 rounded-full mx-auto mb-4"></div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-bold text-gray-900 text-lg">Trip to Central Area</h3>
+<p class="text-xs text-gray-500 font-medium mt-0.5">via Berger Junction</p>
+</div>
+<div class="bg-green-100 text-green-800 px-2.5 py-1 rounded-md text-[10px] font-bold tracking-wide uppercase">
+                                            On Route
+                                        </div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3 p-3 bg-green-50/50 rounded-xl border border-green-100">
+<div class="w-10 h-10 rounded-full bg-white border border-gray-100 flex items-center justify-center text-green-700 shadow-sm">
+<span class="material-symbols-outlined text-lg">local_taxi</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<span class="text-sm font-bold text-gray-800">Painted Taxi</span>
+<span class="text-sm font-bold text-primary">₦400</span>
+</div>
+<div class="flex justify-between items-center mt-0.5">
+<span class="text-[10px] text-gray-500">Arriving in 3 mins</span>
+<span class="text-[10px] text-gray-400">Usually fastest</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 p-2 opacity-60">
+<div class="w-10 h-10 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-500">
+<span class="material-symbols-outlined text-lg">directions_bus</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<span class="text-sm font-medium text-gray-600">Green Bus</span>
+<span class="text-sm font-medium text-gray-600">₦200</span>
+</div>
+<span class="text-[10px] text-gray-400">Next bus: 15 mins</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[580px] bg-gradient-to-tr from-green-200 to-primary rounded-[3rem] -rotate-3 opacity-20 blur-3xl -z-10"></div>
+</div>
+</div>
+</section>
+<section class="w-full bg-white dark:bg-gray-800 py-10 border-y border-border-light dark:border-border-dark">
+<div class="max-w-7xl mx-auto px-4 md:px-10 flex flex-wrap justify-around gap-8 md:gap-4">
+<div class="flex flex-col items-center text-center">
+<span class="text-3xl md:text-4xl font-black text-primary mb-1">200+</span>
+<span class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark">Abuja Routes</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="text-3xl md:text-4xl font-black text-primary mb-1">50k+</span>
+<span class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark">Active Users</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="text-3xl md:text-4xl font-black text-primary mb-1">10</span>
+<span class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark">Key Hubs Mapped</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="text-3xl md:text-4xl font-black text-primary mb-1">24/7</span>
+<span class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark">Real-time Updates</span>
+</div>
+</div>
+</section>
+<section class="py-20 px-4 md:px-10 bg-background-light dark:bg-background-dark" id="features">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col items-center gap-4 mb-16 text-center">
+<span class="text-primary font-bold text-sm tracking-wider uppercase">Features</span>
+<h2 class="text-3xl md:text-4xl font-bold text-text-light dark:text-text-dark max-w-2xl">
+                        Why TransitNG is Essential for Abuja Commuters
+                    </h2>
+<p class="text-text-secondary-light dark:text-text-secondary-dark max-w-2xl text-lg">
+                        Designed for the everyday hustle, bringing order to the chaos of informal transit networks in the capital.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-border-light dark:border-border-dark shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">turn_right</span>
+</div>
+<h3 class="text-xl font-bold text-text-light dark:text-text-dark mb-3">Turn-by-turn Navigation</h3>
+<p class="text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">
+                            Precise directions for taxis, kekes, and walking. We account for informal stops and route deviations that standard maps miss in Wuse and Garki.
+                        </p>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-border-light dark:border-border-dark shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 rounded-xl bg-yellow-50 dark:bg-yellow-900/20 flex items-center justify-center text-yellow-600 mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">notifications_active</span>
+</div>
+<h3 class="text-xl font-bold text-text-light dark:text-text-dark mb-3">Real-time Alighting Alerts</h3>
+<p class="text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">
+                            Relax or nap during your commute. We'll send you a loud notification when your stop is approaching so you can alight at the right junction.
+                        </p>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-border-light dark:border-border-dark shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 rounded-xl bg-green-50 dark:bg-green-900/20 flex items-center justify-center text-green-600 mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">alt_route</span>
+</div>
+<h3 class="text-xl font-bold text-text-light dark:text-text-dark mb-3">Informal Route Mapping</h3>
+<p class="text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">
+                            We have mapped the unmapped. Access comprehensive price estimates and routes for local "along" taxis and green buses.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-4 md:px-10 bg-white dark:bg-gray-900" id="how-it-works">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-3xl md:text-4xl font-bold text-text-light dark:text-text-dark mb-6">How It Works</h2>
+<p class="text-lg text-text-secondary-light dark:text-text-secondary-dark mb-10">
+                            Navigate the city like a pro in three simple steps. No more asking strangers for directions at Berger.
+                        </p>
+<div class="relative pl-8 border-l-2 border-border-light dark:border-border-dark space-y-12">
+<div class="relative">
+<span class="absolute -left-[41px] top-0 flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold text-sm ring-4 ring-white dark:ring-gray-900">1</span>
+<div class="flex flex-col gap-2">
+<h3 class="text-xl font-bold text-text-light dark:text-text-dark flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">pin_drop</span>
+                                        Enter Destination
+                                    </h3>
+<p class="text-text-secondary-light dark:text-text-secondary-dark">Input where you are going. The app instantly calculates routes using available Abuja public transport.</p>
+</div>
+</div>
+<div class="relative">
+<span class="absolute -left-[41px] top-0 flex items-center justify-center w-8 h-8 rounded-full bg-white dark:bg-gray-800 border-2 border-primary text-primary font-bold text-sm ring-4 ring-white dark:ring-gray-900">2</span>
+<div class="flex flex-col gap-2">
+<h3 class="text-xl font-bold text-text-light dark:text-text-dark flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">commute</span>
+                                        Detailed description view
+                                    </h3>
+<p class="text-text-secondary-light dark:text-text-secondary-dark">A detailed description of how to take your stops is shown for seamless navigation</p>
+</div>
+</div>
+<div class="relative">
+<span class="absolute -left-[41px] top-0 flex items-center justify-center w-8 h-8 rounded-full bg-white dark:bg-gray-800 border-2 border-primary text-primary font-bold text-sm ring-4 ring-white dark:ring-gray-900">3</span>
+<div class="flex flex-col gap-2">
+<h3 class="text-xl font-bold text-text-light dark:text-text-dark flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">notifications</span>
+                                        Get Real-time Alerts
+                                    </h3>
+<p class="text-text-secondary-light dark:text-text-secondary-dark">Start your journey. We track your progress and notify you exactly when to get off.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative h-[500px] w-full bg-gray-100 dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl border border-border-light dark:border-border-dark">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Overhead view of busy Nigerian intersection traffic" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDMzgh99rF0ATnaD7l7V9fOp9JPbZK3FltRE-5Q7xzMsYL0S3SqRVSZqUqhlQQy32Ky0j29NEq2lXh8x1BJ5J3NVgXRy0n5pJsOO0k8B9O1SAwfezutCPVqNg_Aoa16S93nHcxGGOie6PW-5ztNdlphtTHCUc1Zbc6r3qA-Z1ETVytRcVjFqb6THkJY8WaJS0djGWr9-MFnhNvqnJNRmWfqWGE4A1zFhbbAByrxVCfvuBoLwsH_KFCPlBUbuWfRLBfPklRLGbdl6MY'); opacity: 0.8;"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8">
+<div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 text-white">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-yellow-400 animate-pulse">circle</span>
+<span class="font-bold">Live Tracking</span>
+</div>
+<div class="w-full bg-white/20 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary w-2/3 h-full rounded-full"></div>
+</div>
+<div class="flex justify-between text-xs mt-2 text-gray-200">
+<span>Maitama District</span>
+<span>Wuse II</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-4 md:px-10 bg-background-light dark:bg-background-dark" id="testimonials">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col items-center gap-4 mb-12 text-center">
+<h2 class="text-3xl md:text-4xl font-bold text-text-light dark:text-text-dark">
+                        What Commuters Are Saying
+                    </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-border-light dark:border-border-dark flex flex-col gap-4">
+<div class="flex text-yellow-400 gap-1">
+<span class="material-symbols-outlined fill-current text-sm">star</span>
+<span class="material-symbols-outlined fill-current text-sm">star</span>
+<span class="material-symbols-outlined fill-current text-sm">star</span>
+<span class="material-symbols-outlined fill-current text-sm">star</span>
+<span class="material-symbols-outlined fill-current text-sm">star</span>
+</div>
+<p class="text-text-light dark:text-text-dark italic">"I just moved to Abuja and was terrified of taking taxis. TransitNG made it so easy. I knew exactly how much to pay and where to stop."</p>
+<div class="flex items-center gap-3 mt-auto pt-2">
+<div class="w-10 h-10 rounded-full bg-gray-200" data-alt="Portrait of Sarah A." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCoZTv81eGIWgnFZBsq5Xm1xYHewg3MJ3pXsbpJQoUXopWsMIBTW0Fdi0_PVAD3VDp8qUf7J3aIz4F60NC_U47nzbykkUb99yANgF8Wti4qaofIXNi4vFJxYrwM18n73dzrg6uu_Oo-rCPG0Z31QXZ5IcFYqDgIiw700L0HM2T5Ww80Zr0d4QIcLvHCW5vi5Rz5Bk9qDuHagExCyLQty_0M9veZoMcA3F4LlzTp0x7B0DSeLhV3YsM6X8MUexb6mDZZ_smXfNGiW6o'); background-size: cover;"></div>
+<div>
+<div class="font-bold text-sm text-text-light dark:text-text-dark">Sarah A.</div>
+<div class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Student, UNIABUJA</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-border-light dark:border-border-dark flex flex-col gap-4">
+<div class="flex text-yellow-400 gap-1">
+<span class="material-symbols-outlined fill-current text-sm">star</span>
+<span class="material-symbols-outlined fill-current text-sm">star</span>
+<span class="material-symbols-outlined fill-current text-sm">star</span>
+<span class="material-symbols-outlined fill-current text-sm">star</span>
+<span class="material-symbols-outlined fill-current text-sm">star</span>
+</div>
+<p class="text-text-light dark:text-text-dark italic">"The alarm feature is a lifesaver! I used to miss my stop when I dozed off after work. Now TransitNG wakes me up before Area 1."</p>
+<div class="flex items-center gap-3 mt-auto pt-2">
+<div class="w-10 h-10 rounded-full bg-gray-200" data-alt="Portrait of Chinedu O." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSyhnHxS6mo9FfUhqSI8IAtQqRSxiMBWU0tPlTbBXEXkCZhcqFbDUSXBarljERmWjs6GXPjYjtt-0YV62fCgccYqemJyo0c0izKVbW5-DuJZR9nTxvrh5Jj5VhJDtP_RTSMIttWcEBFcEC75Au3SHHNcTmOrqwImpj2VMvoj59ajr1Idx1QY8DYv3NPaLuvriLQc3Ch-9jWzrnJ29goIQqt7oR0j8CLE4lL1YTsKeURDXAuvkhPEJgBt-2AvJIcyhPgIxbG0DBqno'); background-size: cover;"></div>
+<div>
+<div class="font-bold text-sm text-text-light dark:text-text-dark">Chinedu O.</div>
+<div class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Civil Servant, Garki</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-border-light dark:border-border-dark flex flex-col gap-4">
+<div class="flex text-yellow-400 gap-1">
+<span class="material-symbols-outlined fill-current text-sm">star</span>
+<span class="material-symbols-outlined fill-current text-sm">star</span>
+<span class="material-symbols-outlined fill-current text-sm">star</span>
+<span class="material-symbols-outlined fill-current text-sm">star</span>
+<span class="material-symbols-outlined fill-current text-sm">star_half</span>
+</div>
+<p class="text-text-light dark:text-text-dark italic">"Finally, an app that understands that not everyone has a car in Abuja. The informal routes for Kekes are surprisingly accurate."</p>
+<div class="flex items-center gap-3 mt-auto pt-2">
+<div class="w-10 h-10 rounded-full bg-gray-200" data-alt="Portrait of Tunde B." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyCxvbSsrTKmFmF3BCcnfCcfuEgAvJB7mDa1uHkYu_deBMAVISJd1BKJRdNAFgtDj4PeF5K7DREe2j5PikYlG5OReZne-tg-Pig1TWwZUHjdGkZRMxpYzq8hS2cSV1MTVxdqg-lX8q_BC6vdR01lLkjX4O85PKftZOC6iHGHe5wBUX89a1scLXmtAF3-IwTkEUqcOywg-C23mpmAI0qsVu8yZRZl91YaP5dvdKsbTc09uADvdRnJT4zg7TC93CFJu0fxdB8Rk3dew'); background-size: cover;"></div>
+<div>
+<div class="font-bold text-sm text-text-light dark:text-text-dark">Tunde B.</div>
+<div class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Freelancer</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-4 md:px-10 bg-primary text-white">
+<div class="max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
+<h2 class="text-3xl md:text-5xl font-black">Ready to master your commute?</h2>
+<p class="text-lg md:text-xl text-green-100 max-w-2xl">
+                    Join thousands of Nigerians moving smarter. Download TransitNG today and never get lost in Abuja again.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4 w-full justify-center">
+<button class="flex items-center justify-center rounded-lg h-14 px-8 bg-white text-primary text-lg font-bold shadow-lg hover:bg-gray-100 transition-colors w-full sm:w-auto">
+<span class="material-symbols-outlined mr-2">android</span>
+                        Get for Android
+                    </button>
+<button class="flex items-center justify-center rounded-lg h-14 px-8 bg-black/20 text-white border border-white/30 text-lg font-bold hover:bg-black/30 transition-colors w-full sm:w-auto">
+<span class="material-symbols-outlined mr-2">ios</span>
+                        Get for iPhone
+                    </button>
+</div>
+</div>
+</section>
+<footer class="bg-background-light dark:bg-background-dark pt-16 pb-8 border-t border-border-light dark:border-border-dark px-4 md:px-10">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined text-3xl text-primary">directions_bus</span>
+<span class="text-xl font-bold">TransitNG</span>
+</div>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">
+                            Making informal transit formal, one stop at a time. Proudly built for Nigeria.
+                        </p>
+</div>
+<div>
+<h4 class="font-bold text-text-light dark:text-text-dark mb-4">Product</h4>
+<ul class="flex flex-col gap-2 text-sm text-text-secondary-light dark:text-text-secondary-dark">
+<li><a class="hover:text-primary" href="#">Download</a></li>
+<li><a class="hover:text-primary" href="#">Live Map</a></li>
+<li><a class="hover:text-primary" href="#">Features</a></li>
+<li><a class="hover:text-primary" href="#">Pricing</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-text-light dark:text-text-dark mb-4">Company</h4>
+<ul class="flex flex-col gap-2 text-sm text-text-secondary-light dark:text-text-secondary-dark">
+<li><a class="hover:text-primary" href="#">About Us</a></li>
+<li><a class="hover:text-primary" href="#">Careers</a></li>
+<li><a class="hover:text-primary" href="#">Blog</a></li>
+<li><a class="hover:text-primary" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-text-light dark:text-text-dark mb-4">Stay Updated</h4>
+<form class="flex flex-col gap-3">
+<input class="h-10 px-4 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Enter your email" type="email"/>
+<button class="h-10 rounded-lg bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="border-t border-border-light dark:border-border-dark pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-text-secondary-light dark:text-text-secondary-dark">© 2026 TransitNG. All rights reserved.</p>
+<div class="flex gap-6 text-text-secondary-light dark:text-text-secondary-dark">
+<a class="hover:text-primary" href="#"><span class="material-symbols-outlined text-lg">public</span></a> 
+<a class="hover:text-primary" href="#"><span class="material-symbols-outlined text-lg">alternate_email</span></a> 
+<a class="hover:text-primary" href="#"><span class="material-symbols-outlined text-lg">photo_camera</span></a> 
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
